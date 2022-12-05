@@ -15,3 +15,4 @@ RUN npm run build --prod
 FROM nginx:1.17.1-alpine
 
 COPY --from=build-step /app/dist/front-ci-residential /usr/share/nginx/html
+COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
