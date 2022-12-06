@@ -1,0 +1,182 @@
+<section class="h-100 bg-dark">
+  <div class="container py-1 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-6 d-none d-xl-block">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                alt="Sample photo"
+                class="img-fluid"
+                style="
+                  border-top-left-radius: 0.25rem;
+                  border-bottom-left-radius: 0.25rem;
+                  height: 100vh;
+                  object-fit: cover;
+                  width: 100%;
+                "
+              />
+            </div>
+            <form
+              novalidate
+              [formGroup]="userForm"
+              class="col-xl-6"
+              *ngIf="userForm"
+              (ngSubmit)="onSubmit()"
+            >
+              <div class="card-body p-md-5 text-black">
+                <h3 class="mb-5 text-uppercase">Registro de residente</h3>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <select
+                        class="form-control form-control-lg"
+                        id="tipoDocumentoResidente"
+                        formControlName="tipoDocumentoResidente"
+                      >
+                        <option value="CC">CC</option>
+                        <option value="TI">TI</option>
+                        <option value="DE">DE</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+                    <label class="form-label" for="tipoDocumentoResidente"
+                      >Tipo Documento Residente</label
+                    >
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="number"
+                        id="numeroDocumentoResidente"
+                        formControlName="numeroDocumentoResidente"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="numeroDocumentoResidente"
+                        >Numero Documento Residente</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="nombreResidente"
+                        formControlName="nombreResidente"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="nombreResidente"
+                        >Nombre Residente</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="email"
+                        formControlName="email"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="email"
+                        >Correo electrónico</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="telefono"
+                        formControlName="telefono"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="telefono">Teléfono</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="number"
+                        id="torre"
+                        formControlName="torre"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="torre">Torre</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input
+                        type="number"
+                        id="apartamento"
+                        formControlName="apartamento"
+                        class="form-control form-control-lg"
+                      />
+                      <label class="form-label" for="apartamento"
+                        >Apartamento</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <select
+                        class="form-control form-control-lg"
+                        id="propietario"
+                        formControlName="propietario"
+                      >
+                        <option value="true">SI</option>
+                        <option value="false">NO</option>
+                      </select>
+                    </div>
+                    <label class="form-label" for="propietario"
+                      >¿Es propietario?</label
+                    >
+                  </div>
+
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <select
+                        class="form-control form-control-lg"
+                        id="genero"
+                        formControlName="genero"
+                      >
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                    </div>
+                    <label class="form-label" for="genero">Genero</label>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end pt-3">
+                  <button
+                    type="submit"
+                    class="btn btn-warning btn-lg ms-2"
+                    [disabled]="userForm.invalid"
+                  >
+                    Registrar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

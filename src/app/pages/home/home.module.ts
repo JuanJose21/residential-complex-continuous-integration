@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { CardModule } from '../../components/card/card.module';
 import { FooterModule } from '../../components/footer/footer.module';
 import { NavbarModule } from '../../components/navbar/navbar.module';
+import { FormRegisterModule } from '../../components/form-register/form-register.module';
 import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HomeRoutingModule } from './home-routing.module';
     CardModule,
     FooterModule,
     NavbarModule,
+    FormRegisterModule,
   ],
 })
 export class HomeModule {}
