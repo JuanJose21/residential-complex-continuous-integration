@@ -14,9 +14,9 @@ export class FormRegisterComponent {
 
   constructor(private userService: UserService) {
     this.userForm = new FormGroup({
-      tipoDocumentoResidente: new FormControl('', [Validators.required]),
-      numeroDocumentoResidente: new FormControl('', [Validators.required]),
-      nombreResidente: new FormControl('', [Validators.required]),
+      tipo_documento_residente: new FormControl('', [Validators.required]),
+      numero_documento_residente: new FormControl('', [Validators.required]),
+      nombre_residente: new FormControl('', [Validators.required]),
       torre: new FormControl('', [Validators.required]),
       apartamento: new FormControl('', [Validators.required]),
       propietario: new FormControl('', [Validators.required]),

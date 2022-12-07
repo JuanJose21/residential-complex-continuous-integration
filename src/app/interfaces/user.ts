@@ -1,7 +1,7 @@
 export interface IUser {
-  tipoDocumentoResidente: string;
-  numeroDocumentoResidente: number;
-  nombreResidente: string;
+  tipo_documento_residente: string;
+  numero_documento_residente: number;
+  nombre_residente: string;
   torre: number;
   apartamento: number;
   propietario: boolean;
